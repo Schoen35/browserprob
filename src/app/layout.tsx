@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import Script from "next/script";
 import { Atkinson_Hyperlegible, IBM_Plex_Mono, Schibsted_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -114,6 +115,7 @@ export default async function RootLayout({
           <Script id="adsense-loader" src={ADSENSE_SCRIPT_SRC} strategy="afterInteractive" crossOrigin="anonymous" nonce={nonce} />
         )}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
